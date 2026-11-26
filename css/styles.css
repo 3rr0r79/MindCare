@@ -9,3 +9,47 @@ body.dark .theme,body.dark .menu{background:#354c3d;color:#e7eee8;border-color:#
 @media(max-width:620px){
   body.dark .nav-links{background:#1d2e26;border-color:#354c3d}
 }
+
+
+/* Mejoras de contraste para el tema oscuro */
+body.dark h1, body.dark h2, body.dark h3,
+body.dark .page-head h1, body.dark .tool-card h2,
+body.dark .journal h2 { color:#f0f6f0; }
+body.dark em { color:#a9cfae; }
+body.dark .eyebrow.green { color:#a9cfae; }
+body.dark .page-head p, body.dark .tool-card p,
+body.dark .journal p, body.dark .disclaimer { color:#c2d0c5; }
+body.dark .tool-card label { color:#e4eee6; }
+body.dark .moods button { background:#354c3d; color:#f1f7f1; }
+body.dark .moods button small { color:#d5e2d7; }
+body.dark .moods button.selected { background:#49664f; border-color:#a9cfae; }
+body.dark .message, body.dark .prompt-box { background:#354c3d; color:#e1eee3; }
+body.dark .journal blockquote { background:#354c3d; color:#e1eee3; }
+body.dark .journal-panel, body.dark .saved-entry { background:#2b4034; color:#edf4ee; }
+body.dark .journal-panel textarea, body.dark .journal-panel select { background:#1d3026; color:#edf4ee; border-color:#526b59; }
+body.dark .journal-panel textarea::placeholder { color:#aebfb1; }
+body.dark .saved-entry small { color:#c2d0c5; }
+body.dark .soft-btn { background:#405b48; color:#f0f6f0; }
+.tool-card, .journal-panel, .saved-entry { transition:background .3s,color .3s,transform .25s; }
+.moods button:focus-visible, .btn:focus-visible, .soft-btn:focus-visible,
+.journal-panel textarea:focus-visible, .journal-panel select:focus-visible { outline:3px solid #8ebd98; outline-offset:3px; }
+.moods button { cursor:pointer; }
+.mood-extra { margin-top:14px; display:grid; gap:8px; }
+.mood-extra label, .journal-panel label { font-size:.84rem; font-weight:700; color:#53665a; }
+.mood-extra input[type=range] { accent-color:#72977a; width:100%; }
+.prompt-box { background:#edf3ed; border-radius:10px; padding:13px 15px; color:#52715a; font-size:.88rem; margin:14px 0; min-height:52px; }
+.journal-panel { background:#fff; border-radius:15px; padding:25px; box-shadow:0 14px 38px #19372c12; }
+.journal-panel textarea, .journal-panel select { width:100%; border:1px solid #d8e2d8; border-radius:9px; padding:13px; font:inherit; color:#26372f; background:#fbfcf8; margin:8px 0 14px; }
+.journal-panel textarea { min-height:130px; resize:vertical; }
+.journal-actions { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.soft-btn { background:#e7eee6; color:#244b37; border-radius:8px; padding:10px 14px; font-weight:700; }
+.saved-list { display:grid; gap:12px; margin-top:18px; }
+.saved-entry { background:#f1f5ef; padding:16px; border-radius:10px; animation:entryIn .4s ease both; }
+.saved-entry p { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.9rem; }
+.saved-entry small { color:#68756e; }
+.entry-head { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+.delete-entry { background:transparent; color:#a14d4d; font-weight:700; padding:5px; }
+.breath.active { animation:breathe 8s ease-in-out infinite; }
+.breath-phase { font-size:.8rem; color:#698575; min-height:22px; }
+@keyframes entryIn { from {opacity:0;transform:translateY(12px)} to {opacity:1;transform:translateY(0)} }
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
